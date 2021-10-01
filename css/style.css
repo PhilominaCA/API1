@@ -4,7 +4,6 @@
 }
 
 body {
-    backdrop-filter: blur(4px);
     padding: 2vw;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-image: url("https://is1-ssl.mzstatic.com/image/thumb/Purple71/v4/3e/fe/af/3efeaf20-2d10-8329-e5b0-2c4f6634af83/source/512x512bb.jpg");
@@ -13,38 +12,14 @@ body {
     color: black;
 }
 
-#cal_data_disp {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto;
+#kural_err_disp {
     padding: 0.5%;
     color: black;
 }
 
-#dateDiv {
-    border: 0.1vw solid rgba(247, 238, 238, 0.8);
-    padding: 0.1vw;
-    font-size: 0.9vw;
-    height: 12vw;
-    width: 13.5vw;
-    font-weight: bold;
-    backdrop-filter: blur(20px);
-    color: black;
-}
-
-#occDate {
+#kuralNum {
     width: 30%;
     font-size: x-large;
-}
-
-#date {
-    background-color: black;
-    color: black;
-    border-radius: 5vw;
-    font-size: 100%;
-}
-
-#occDiv {
-    border: 0.1vw solid rgba(65, 4, 4, 0.8);
 }
 
 button {
@@ -71,6 +46,7 @@ table {
 th {
     color: white;
     font-size: xx-large;
+    align-items: center;
 }
 
 th,

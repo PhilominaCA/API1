@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Thirukural</title>
 </head>
@@ -18,28 +17,28 @@
         <h5>Enter any kural number to get desired kural in English & Tamil</h5><br>
     </div>
     <div class="mx-auto">
-        <input type="text" id="occDate" class="btn btn-dark" placeholder="Enter any kural number (1 to 1330)" onKeyPress="handleKeypress(event)">
-        <button class="btn btn-dark" onclick="getChurchOc()">Get Kural</button>
+        <input type="text" id="kuralNum" class="btn btn-dark" placeholder="Enter any kural number (1 to 1330)" onKeyPress="handleKeypress(event)">
+        <button class="btn btn-dark" onclick="getKural()">Get Kural</button>
     </div>
-    <div id="cal_data_disp">
+    <div id="kural_err_disp">
 
     </div>
     <br>
-    <div id="">
-        <div id="tamDiv">
+    <div>
+        <div>
             <table>
                 <tr>
                     <th colspan="2">Tamil </th>
                 </tr>
                 <tr>
                     <td>Thirukural</td>
-                    <td id="KuralTam"> அகர முதல எழுத்தெல்லாம் ஆதி<br> பகவன் முதற்றே உலகு.</td>
+                    <td> அகர முதல எழுத்தெல்லாம் ஆதி<br> பகவன் முதற்றே உலகு.</td>
                 </tr>
                 <tr>
                     <td>
                         Porul
                     </td>
-                    <td id="porulTam">அகரம் எழுத்துக்களுக்கு முதன்மை; ஆதிபகவன், உலகில் வாழும் உயிர்களுக்கு முதன்மை
+                    <td>அகரம் எழுத்துக்களுக்கு முதன்மை; ஆதிபகவன், உலகில் வாழும் உயிர்களுக்கு முதன்மை
                     </td>
                 </tr>
             </table>
@@ -47,21 +46,21 @@
         <br>
         <hr>
 
-        <div id="engDiv">
+        <div>
             <table>
                 <tr>
                     <th colspan="2">English </th>
                 </tr>
                 <tr>
                     <td>Thirukural</td>
-                    <td id="KuralEng">'A' leads letters; the Ancient Lord Leads and lords the entire world
+                    <td>'A' leads letters; the Ancient Lord Leads and lords the entire world
                     </td>
                 </tr>
                 <tr>
                     <td>
                         Meaning
                     </td>
-                    <td id="porulEng">As the letter A is the first of all letters, so the eternal God is first in the world</td>
+                    <td>As the letter A is the first of all letters, so the eternal God is first in the world</td>
                 </tr>
             </table>
         </div>
