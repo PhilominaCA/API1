@@ -4,7 +4,7 @@
 }
 
 body {
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(4px);
     padding: 2vw;
     font-family: Georgia, 'Times New Roman', Times, serif;
     /*  background-image: url("https://cache.desktopnexus.com/thumbseg/573/573728-bigthumbnail.jpg");
