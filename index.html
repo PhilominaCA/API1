@@ -11,17 +11,61 @@
     <title>Chruch Calender</title>
 </head>
 
-<body id="page_bo">
+<body id="page_bo" class="container">
     <div id="div_title">
-        <h1 class="mx-auto">View Chruch Calender with Occasions</h1>
+        <h1 class="mx-auto">Thirukural Blog</h1>
+        <br>
+        <h5>Enter any kural number to get desired kural in English & Tamil</h5><br>
     </div>
     <div class="mx-auto">
-        <input type="month" id="occDate" class="btn btn-outline-light" placeholder="YYYY-MM">
-        <button class="btn btn-outline-light" onclick="getChurchOc()">Get Calender</button>
+        <input type="number" id="occDate" class="btn btn-outline-light" placeholder="Enter any kural number (1 to 1330)">
+        <button class="btn btn-outline-dark" onclick="getChurchOc()">Get Kural</button>
+    </div>
+    <div id="cal_data_disp">
+
     </div>
     <br>
-    <div id="calender_div"></div>
-    <div id="cal_data_disp"></div>
+    <div id="">
+        <div id="tamDiv">
+            <table>
+                <tr>
+                    <th colspan="2">Tamil </th>
+                </tr>
+                <tr>
+                    <td>Thirukural</td>
+                    <td id="KuralTam"> அகர முதல எழுத்தெல்லாம் ஆதி<br> பகவன் முதற்றே உலகு.</td>
+                </tr>
+                <tr>
+                    <td>
+                        Porul
+                    </td>
+                    <td id="porulTam">அகரம் எழுத்துக்களுக்கு முதன்மை; ஆதிபகவன், உலகில் வாழும் உயிர்களுக்கு முதன்மை
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <hr>
+
+        <div id="engDiv">
+            <table>
+                <tr>
+                    <th colspan="2">English </th>
+                </tr>
+                <tr>
+                    <td>Thirukural</td>
+                    <td id="KuralEng">'A' leads letters; the Ancient Lord Leads and lords the entire world
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Meaning
+                    </td>
+                    <td id="porulEng">As the letter A is the first of all letters, so the eternal God is first in the world</td>
+                </tr>
+            </table>
+        </div>
+    </div>
     <script src="./js/script.js"></script>
 </body>
 

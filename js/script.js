@@ -1,22 +1,24 @@
 //calender fetch function
 async function getChurchOc() {
-    let defaultDt = document.getElementById("occDate").value;
+    let kuralNum = document.getElementById("occDate").value;
 
     //check for null value
-    if (defaultDt == "") {
-        document.getElementById("cal_data_disp").innerHTML = `<h2>Please select a month & year!!!</h2>`;
+    if (kuralNum == "") {
+        alert("Please enter a Kural number");
+    } else if (kuralNum > 1330 || kuralNum < 1) {
+        alert("Please enter a valid Kural number in range 1 to 1330");
     } else {
-        let inputDt = new Date(defaultDt);
-        let year = inputDt.getFullYear();
-        let month = inputDt.getMonth();
 
         //fetch API data
         try {
-            const calData = await fetch(`https://api-thirukkural.vercel.app/api?num=1`);
+            const calData = await fetch(`https://api-thirukkural.vercel.app/api?num=${kuralNum}`);
             const calJson = await calData.json();
             var calDataDisp = document.getElementById("cal_data_disp");
-            calDataDisp.innerHTML = calJson;
-            console.log(calJson);
+            var kuralcol = document.getElementsByTagName("td");
+            kuralcol[1].innerHTML = calJson.line1 + "<br>" + calJson.line2;
+            kuralcol[3].innerHTML = calJson.tam_exp;
+            kuralcol[5].innerHTML = calJson.eng;
+            kuralcol[7].innerHTML = calJson.eng_exp;
             /*
                         //API data manipulation
                         const calJson = await calData.json();

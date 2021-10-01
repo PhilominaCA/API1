@@ -1,16 +1,21 @@
 #div_title {
-    color: #f1f1e1;
+    color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
+    backdrop-filter: blur(2px);
+    padding: 2vw;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-image: url("https://images.unsplash.com/photo-1438032005730-c779502df39b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2h1cmNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
+    /*  background-image: url("https://cache.desktopnexus.com/thumbseg/573/573728-bigthumbnail.jpg");
+    /* background-image: url("https://images.unsplash.com/photo-1438032005730-c779502df39b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2h1cmNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
+   */
+    background-image: url("https://is1-ssl.mzstatic.com/image/thumb/Purple71/v4/3e/fe/af/3efeaf20-2d10-8329-e5b0-2c4f6634af83/source/512x512bb.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
     border: 0.1vw solid whitesmoke;
-    backdrop-filter: blur(10px);
+    /*  backdrop-filter: blur(10px);*/
 }
 
 #cal_data_disp {
@@ -49,15 +54,31 @@ body {
 
 button {
     height: 4vw;
-    width: 20%;
+    width: 15%;
+    font-weight: bolder;
 }
 
 .mx-auto {
-    width: 70vw;
+    width: 150vw;
 }
 
 h2 {
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding-left: 14vw;
+}
+
+table {
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+th {
+    color: white;
+}
+
+th,
+td {
+    padding: 1vw;
+    font-weight: bold;
 }
