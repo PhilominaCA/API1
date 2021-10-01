@@ -69,11 +69,13 @@ table {
 }
 
 th {
-    color: black;
+    color: white;
+    font-size: xx-large;
 }
 
 th,
 td {
     padding: 1vw;
     font-weight: bold;
+    font-size: large;
 }
