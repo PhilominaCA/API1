@@ -1,5 +1,11 @@
 document.getElementById("occDate").value = "";
 
+function handleKeypress(e) {
+    //Enter Key Press
+    if (e.keyCode === 13) {
+        getChurchOc();
+    }
+};
 //calender fetch function
 async function getChurchOc() {
     let kuralNum = document.getElementById("occDate").value;
@@ -12,7 +18,6 @@ async function getChurchOc() {
         document.getElementById("occDate").value = "";
 
     } else {
-
         //fetch API data
         try {
             const calData = await fetch(`https://api-thirukkural.vercel.app/api?num=${parseInt(kuralNum)}`);

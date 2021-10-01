@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Chruch Calender</title>
+    <title>Thirukural</title>
 </head>
 
 <body id="page_bo" class="container">
@@ -18,7 +18,7 @@
         <h5>Enter any kural number to get desired kural in English & Tamil</h5><br>
     </div>
     <div class="mx-auto">
-        <input type="text" id="occDate" class="btn btn-dark" placeholder="Enter any kural number (1 to 1330)">
+        <input type="text" id="occDate" class="btn btn-dark" placeholder="Enter any kural number (1 to 1330)" onKeyPress="handleKeypress(event)">
         <button class="btn btn-dark" onclick="getChurchOc()">Get Kural</button>
     </div>
     <div id="cal_data_disp">
