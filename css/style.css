@@ -1,5 +1,5 @@
 #div_title {
-    color: white;
+    color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -13,8 +13,8 @@ body {
     background-image: url("https://is1-ssl.mzstatic.com/image/thumb/Purple71/v4/3e/fe/af/3efeaf20-2d10-8329-e5b0-2c4f6634af83/source/512x512bb.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
-    border: 0.1vw solid whitesmoke;
+    color: black;
+    /* border: 0.1vw solid whitesmoke;*/
     /*  backdrop-filter: blur(10px);*/
 }
 
@@ -22,7 +22,7 @@ body {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto;
     padding: 0.5%;
-    color: white;
+    color: black;
 }
 
 #dateDiv {
@@ -43,7 +43,7 @@ body {
 
 #date {
     background-color: black;
-    color: whitesmoke;
+    color: black;
     border-radius: 5vw;
     font-size: 100%;
 }
@@ -63,7 +63,7 @@ button {
 }
 
 h2 {
-    color: white;
+    color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding-left: 14vw;
 }
@@ -74,7 +74,7 @@ table {
 }
 
 th {
-    color: white;
+    color: black;
 }
 
 th,

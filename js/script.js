@@ -1,3 +1,5 @@
+document.getElementById("occDate").value = "";
+
 //calender fetch function
 async function getChurchOc() {
     let kuralNum = document.getElementById("occDate").value;
@@ -5,13 +7,15 @@ async function getChurchOc() {
     //check for null value
     if (kuralNum == "") {
         alert("Please enter a Kural number");
-    } else if (kuralNum > 1330 || kuralNum < 1) {
+    } else if (kuralNum > 1330 || kuralNum < 1 || isNaN(kuralNum)) {
         alert("Please enter a valid Kural number in range 1 to 1330");
+        document.getElementById("occDate").value = "";
+
     } else {
 
         //fetch API data
         try {
-            const calData = await fetch(`https://api-thirukkural.vercel.app/api?num=${kuralNum}`);
+            const calData = await fetch(`https://api-thirukkural.vercel.app/api?num=${parseInt(kuralNum)}`);
             const calJson = await calData.json();
             var calDataDisp = document.getElementById("cal_data_disp");
             var kuralcol = document.getElementsByTagName("td");
@@ -19,35 +23,7 @@ async function getChurchOc() {
             kuralcol[3].innerHTML = calJson.tam_exp;
             kuralcol[5].innerHTML = calJson.eng;
             kuralcol[7].innerHTML = calJson.eng_exp;
-            /*
-                        //API data manipulation
-                        const calJson = await calData.json();
-                        var calDataDisp = document.getElementById("cal_data_disp");
-
-                        //clear the data before each reqeust
-                        calDataDisp.innerHTML = "";
-
-                        for (let i = 0; i < calJson.length; i++) {
-                            var dateDiv = document.createElement("div");
-                            dateDiv.id = "dateDiv";
-                            var dateSpan = document.createElement("span");
-                            dateSpan.id = "date";
-                            dateSpan.innerHTML = i + 1;
-                            var occSpan = document.createElement("span");
-                            occSpan.id = "occSpan";
-                            dateDiv.appendChild(dateSpan);
-                            dateDiv.appendChild(occSpan);
-                            calDataDisp.appendChild(dateDiv);
-
-                            for (let j = 0; j < calJson[i].celebrations.length; j++) {
-                                let occSpan = document.querySelectorAll("#occSpan");
-                                let occDiv = document.createElement("div");
-                                occDiv.innerHTML = calJson[i].celebrations[j].title;
-                                occDiv.style.background = calJson[i].celebrations[j].colour;
-                                occDiv.id = "occDiv";
-                                occSpan[i].appendChild(occDiv);
-                            }
-                        }*/
+            document.getElementById("occDate").value = "";
         }
 
         //Error Handle
